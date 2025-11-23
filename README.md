@@ -5,182 +5,115 @@
 
 ## 🛠️ Skills & Tools (Complete DevSecOps Roadmap Coverage)
 
----
+### 🔹 Operating Systems & Core Tech
+- Linux Administration
+- Filesystem Management
+- Process & Service Management
+- Permissions, ACLs, Auditing
+- Shell Scripting (Bash)
 
-## 🧩 Core Foundations
-- Linux (architecture, filesystem, permissions, ACLs, services, logs)
-- Shell Scripting (Bash: variables, functions, loops, automation)
-- Networking (IPv4/IPv6, DNS, routing, firewalling, TLS basics)
-- Git & GitHub (branches, PRs, actions, commit signing, pre-commit hooks)
-- Secure SDLC fundamentals (Threat modeling, STRIDE, code review practices)
-- OWASP Top 10 basics
+### 🔹 Networking & Protocols
+- TCP/IP, DNS, DHCP
+- Routing, Subnetting, NAT
+- Firewalls & Packet Filtering
+- Load Balancing Concepts
+- TLS/SSL Fundamentals
 
----
+### 🔹 Version Control & Collaboration
+- Git (branching, merging, PRs)
+- GitHub (Actions, workflows)
+- Commit Signing / Pre-commit Hooks
 
-## 🐳 DevOps & Cloud-Native Skills
-### Docker & Containerization
+### 🔹 Containers & Cloud-Native
 - Docker Architecture
-- Dockerfile (multi-stage builds, optimization)
-- Images, Layers, Volumes, Networks
+- Dockerfile Optimization
+- Multi-Stage Builds
 - Docker Compose
-- Image Scanning (Trivy, Snyk)
-- Image Signing (Cosign)
+- Container Scanning (Trivy, Snyk)
+- Container Signing (Cosign)
 
-### Kubernetes (K8s)
-**Core Concepts:**
-- Pods, Deployments, ReplicaSets, Services  
-- ConfigMaps, Secrets, Ingress, TLS termination  
-- RBAC (Roles, RoleBindings, ClusterRoles)  
-- Pod Security Admission + Pod Security Standards  
+### 🔹 Kubernetes Ecosystem
+- Pods, Deployments, ReplicaSets
+- Services, Ingress, TLS Termination
+- ConfigMaps, Secrets
+- RBAC & Access Controls
+- Pod Security Standards
+- Network Policies
+- Autoscaling (HPA)
+- Persistent Volumes & CSI
+- Helm Charts
+- Runtime Security Tools (Falco)
+- GitOps Tools (ArgoCD, Flux)
+- Service Mesh (Istio mTLS)
 
-**Advanced K8s (from roadmap Week 17–20 & 27):**
-- StatefulSets, Persistent Volumes, CSI Drivers  
-- HPA / Autoscaling  
-- NetworkPolicies (Calico/Cilium)  
-- K8s CIS Benchmark & Hardening  
-- Runtime Security (Falco)  
-- Helm Charts (templating, ChartMuseum)  
-- Operators (cert-manager)  
-- GitOps (ArgoCD/Flux, policy enforcement, auto-sync)
-- Service Mesh (Istio: mTLS, traffic shifting, virtual services)
+### 🔹 Cloud Platforms
+#### AWS
+- IAM (Users, Roles, Policies)
+- EC2, S3, VPC, Route53
+- CloudWatch (metrics/logs)
+- CloudTrail
+#### Azure
+- VMs, VNets, NSGs, Key Vault
+- Azure Monitor & Defender
+#### GCP
+- Compute Engine, GKE
+- Cloud Storage & IAM
+- Cloud Armor
 
----
-
-## ☁️ Cloud Skills (AWS + Azure + GCP)
-### AWS (Main Cloud from Roadmap Month 2)
-- IAM (users, roles, policies, least privilege)
-- EC2 (SSH, security groups, AMIs)
-- S3 (encryption, versioning, access controls)
-- CloudWatch (logs, metrics, alarms)
-- CloudTrail (auditing)
-- VPC (subnets, route tables, IGW, NAT Gateway, NACLs)
-- ELB/ALB basics
-- Auto Scaling basics
-- Route53 (DNS, failover)
-
-### Azure
-- Azure VMs, VNets, NSGs  
-- Azure Key Vault  
-- Azure Monitor + Log Analytics  
-- Azure Security Center / Defender  
-
-### GCP
-- gcloud CLI  
-- Compute Engine (OS Login)  
-- Cloud Storage (signed URLs, uniform access)  
-- GKE cluster basics  
-- Cloud Armor  
-- Pub/Sub + Cloud Functions  
-- Audit Logging  
-
-### Multi-Cloud Skills
-- IAM mapping (AWS vs Azure vs GCP)
-- Multi-cloud DNS failover  
-- Cross-cloud logging  
-- Cloud security comparison  
-- Data replication strategies  
-- Hybrid networking  
-
----
-
-## 🔐 DevSecOps & Security Engineering
-### Security Tools & Concepts
-- Secrets Detection (GitLeaks, pre-commit scanners)
-- Vulnerability Scanning (Trivy, checkov, tfsec)
-- SAST (Semgrep), SCA basics
+### 🔹 Security Engineering
+- Secrets Detection (GitLeaks)
+- Vulnerability Scanning (Trivy, tfsec, checkov)
+- SAST/SCA Basics (Semgrep)
 - SBOM (CycloneDX)
-- Policy-as-Code (OPA/Gatekeeper, Sentinel)
-- IAM hardening
-- Secure CI/CD pipelines  
-- Dependency scanning  
-- Image hardening  
-- Compliance checks (AWS Config)
+- IAM Hardening
+- Policy-as-Code (OPA, Gatekeeper)
+- Compliance Checks (AWS Config)
+- SOC Log Workflows
+- Alert Triage Patterns
 
-### SIEM & Cloud Security
-- AWS GuardDuty  
-- AWS Security Hub  
-- Azure Sentinel  
-- GCP Security Command Center  
-- Log ingestion pipelines (FluentBit/Filebeat → Elasticsearch/Loki)  
-- SOC Runbooks  
-- Alerting & triage workflows  
+### 🔹 Incident Response & Forensics
+- IR Lifecycle
+- Containment & Eradication Steps
+- EC2 Compromise Recovery
+- Basic Memory/Disk Capture Tools
 
-### Incident Response & Forensics
-- IR lifecycle (identify → contain → eradicate → recover)
-- Memory & disk capture basics (volatility, dd)
-- EC2 compromised recovery runbooks
-- Post-incident analysis and corrective measures
+### 🔹 Infrastructure as Code
+#### Terraform
+- Modules, Variables, State Management
+- Remote State (S3 + DynamoDB)
+- Terraform Testing (Terratest)
+- IaC Scanning (checkov, tfsec)
 
----
+#### Ansible
+- Playbooks, Roles, Inventory
+- Ansible Vault
+- Cloud Dynamic Inventory
 
-## 🔧 Infrastructure as Code & Automation
-### Terraform
-- Providers, modules, variables, outputs  
-- Remote state (S3 + DynamoDB locking)  
-- Workspaces (dev/stage/prod)  
-- Terraform testing (Terratest)  
-- Terraform scanning (tfsec, checkov)  
-- Pull request workflows with plan/apply
+### 🔹 Automation & Ops
+- CI/CD Pipelines (GitHub Actions, Jenkins)
+- Build → Test → Scan → Deploy Flows
+- Security Gates in CI/CD
+- Log Rotation & System Automation
+- Patch Automation (SSM, Ansible)
 
-### Ansible
-- Playbooks, Roles, Inventory management  
-- Ansible Vault  
-- Cloud dynamic inventory (aws_ec2 plugin)  
-- Drift detection & automated remediation  
+### 🔹 Observability & Telemetry
+- Prometheus / Alertmanager
+- Grafana Dashboards
+- Loki / ELK Logging
+- OpenTelemetry Tracing
+- SLO/SLI Monitoring
 
-### Configuration & Automation
-- systemd timers, cron  
-- Log rotation  
-- Automated remediation Lambdas  
-- Identity token rotation  
-- Patch automation (SSM/Ansible)
+### 🔹 Secrets & Identity Systems
+- HashiCorp Vault (PKI, Dynamic Secrets)
+- Vault Agent
+- Encryption Workflows
+- Token/Key Rotation
 
----
-
-## ⚙️ CI/CD (Complete DevSecOps Pipeline)
-- GitHub Actions  
-- Jenkins (declarative pipelines)  
-- Build → Test → Scan → Deploy  
-- Security gates (Trivy, Semgrep, SAST/SCA)  
-- Docker build & push pipelines  
-- IaC validation in CI  
-- Blue/Green & Canary deployments  
-
----
-
-## 📊 Observability & Monitoring
-- Prometheus (metrics, exporters)
-- Alertmanager (alerts)
-- Grafana (dashboards)
-- Jaeger / OpenTelemetry (tracing)
-- ELK / Loki logging pipelines
-- SLO/SLI design + alerting
-
----
-
-## 🔑 Secrets & Identity
-- HashiCorp Vault (PKI, dynamic secrets, KV engine)
-- Vault Agent, Vault + Kubernetes integration
-- Transit encryption  
-- Root token rotation  
-- Secret zero problem handling  
-- Vault HA + DR  
-
----
-
-## 🧰 Other Tools
-- VS Code  
-- Nginx  
-- Postman  
-- Docker Desktop  
-- Draw.io / Excalidraw (architecture diagrams)  
+### 🔹 Misc Tools
+- VS Code
+- Nginx
+- Postman
+- Docker Desktop
+- Excalidraw / Draw.io for diagrams
 - GitHub Projects (task tracking)
 
----
-
-## 📈 Currently Improving
-- Complete Cloud Security Labs  
-- Kubernetes + GitOps full pipeline  
-- CI/CD with security gates  
-- Multi-cloud deployments  
-- Real-world DevSecOps project portfolio  
